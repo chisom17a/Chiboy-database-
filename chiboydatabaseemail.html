@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Redirecting...</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: gray;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      padding: 40px;
+      max-width: 500px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #373;
+    }
+    p {
+      color: #656;
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+    img {
+      width: 80%;
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+    .loading {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #f88;
+    }
+  </style>
+</head>
+<body>
+  <div class="bell">
+    <img src="https://cdn-icons-png.flaticon.com/512/10388/10388497.png" alt="Email sending illustration">
+    <h1>Sending Your Message...</h1>
+    <p>your message will be sent shortly.</p>
+    <div class="loading">Redirecting in a moment...</div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "mailto:chiboy21a@gmail.com?subject=Interested in your products&body=Hello, I came across your website and I would like to know more about your products.";
+    }, 4000);
+  </script>
+</body>
+</html>
