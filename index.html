@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="transition-colors duration-300" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chiboy Database</title>
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
@@ -16,62 +16,158 @@
     <style>
       body {
         font-family: 'Orbitron', sans-serif;
-        background: linear-gradient(to right, #0f2927, #213a43, #2c5765);
-        color: #f9f8f8;
       }
+
       .glass {
-        backdrop-filter: blur(120px);
-        background: rba(255, 259, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(16px);
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      html[data-theme='light'] {
+        --bg: #f3f4f6;
+        --text: #1f2937;
+        --card: #ffffff;
+        --accent: #3b82f6;
+        --muted: #6b7280;
+      }
+
+      html[data-theme='dark'] {
+        --bg: #0f172a;
+        --text: #e5e7eb;
+        --card: #1e293b;
+        --accent: #60a5fa;
+        --muted: #94a3b8;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+      }
+
+      .btn {
+        @apply px-4 py-2 font-semibold rounded-xl transition-colors duration-300;
+      }
+
+      .btn-primary {
+        background-color: var(--accent);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: #2563eb;
+      }
+
+      .btn-toggle {
+        background: transparent;
+        border: 1px solid var(--accent);
+        color: var(--accent);
+      }
+
+      .btn-toggle:hover {
+        background-color: var(--accent);
+        color: white;
       }
     </style>
   </head>
 
   <body class="min-h-screen flex items-center justify-center px-4">
-    <div class="max-w-4xl w-full p-8 glass rounded-2xl shadow-xl">
-      <header class="mb-10 text-center">
-        <h1 class="text-5xl font-bold text-blue-400">Chiboy Database</h1>
-        <p class="text-lg text-gray-300 mt-2">The Futuristic Personal Repository</p>
+    <div class="absolute top-6 right-6">
+      <button
+        onclick="toggleTheme()"
+        class="btn btn-toggle text-sm px-3 py-1 rounded-lg"
+      >
+        Toggle Mode
+      </button>
+    </div>
+
+    <div class="max-w-5xl w-full p-10 rounded-3xl glass shadow-2xl">
+      <header class="mb-12 text-center">
+        <h1 class="text-5xl font-bold text-[var(--accent)]">Chiboy Database</h1>
+        <p class="text-lg text-[var(--muted)] mt-2">
+          The Futuristic Personal Repository
+        </p>
       </header>
 
-      <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div>
-          <h2 class="text-2xl font-semibold text-blue-300 mb-4">👨‍🚀 About Me</h2>
-          <p class="text-gray-200">
-            Hello, I'm <strong>Chiboy</strong> — a developer, tech enthusiast, and data-driven thinker.
-            This is my personal futuristic database where I archive my knowledge, projects, and digital footprint.
+          <h2 class="text-2xl font-semibold text-[var(--accent)] mb-4">
+            👨‍🚀 About Me
+          </h2>
+          <p class="text-[var(--text)]">
+            Hello, I'm <strong>Chiboy</strong> — a developer, tech enthusiast,
+            and data-driven thinker. This is my personal futuristic database
+            where I archive my knowledge, projects, and digital footprint.
           </p>
 
-          <ul class="mt-6 space-y-2 text-white and yellow-300">
-            <li>💼 Role: a promotor, a web designer and a content creator</li>
-            <li>🌐 Website: <a href="https://taplink.cc/chibotexam"class="text-green-400 underline">https://chiboy-database.vercel.app/</a></li>
-            <li>✉️ Email: <a href="chiboydatabaseemail.html" class="text-red-400">chiboy21a@gmail.com</a></li>
-            <li>📍 Location: plateau state, Nigeria</li>
+          <ul class="mt-6 space-y-2 text-[var(--muted)]">
+            <li>💼 Role: Full Stack Developer</li>
+            <li>
+              🌐 Website:
+              <a href="#" class="text-[var(--accent)] underline"
+                >https://chiboy.dev</a
+              >
+            </li>
+            <li>
+              ✉️ Email:
+              <a
+                href="mailto:chiboy@example.com"
+                class="text-[var(--accent)] underline"
+                >chiboy@example.com</a
+              >
+            </li>
+            <li>📍 Location: Lagos, Nigeria</li>
           </ul>
+
+          <div class="mt-6">
+            <button class="btn btn-primary">View Resume</button>
+          </div>
         </div>
 
         <div>
-          <h2 class="text-2xl font-semibold text-yellow-300 mb-4">📁 who i am </h2>
-          <ul class="space-y-5">
-            <li class="p-4 rounded-lg bg-pink-800 hover:bg-blue-700 transition">
-              🚀 My job: i am a promoter, a web designer and a content creator
+          <h2 class="text-2xl font-semibold text-[var(--accent)] mb-4">
+            📁 What’s Inside
+          </h2>
+          <ul class="space-y-4">
+            <li
+              class="p-4 rounded-xl bg-[var(--card)] hover:shadow-lg transition"
+            >
+              🚀 Projects: Showcasing my latest apps & tech tools
             </li>
-            <li class="p-4 rounded-lg bg-yellow-800 hover:bg-gray-700 transition">
-              My advice and words: This life is a race for only those who are ready to succed in it. 
+            <li
+              class="p-4 rounded-xl bg-[var(--card)] hover:shadow-lg transition"
+            >
+              📚 Blog: Thoughts on code, life & the future
             </li>
-            <li class="p-4 rounded-lg bg-red-800 hover:bg-gray-700 transition">
-              📸 The way: take the advice of someone who has been there and you won't waste time in being sucessful.
+            <li
+              class="p-4 rounded-xl bg-[var(--card)] hover:shadow-lg transition"
+            >
+              📸 Gallery: Visuals and media library
             </li>
-            <li class="p-4 rounded-lg bg-blue-800 hover:bg-gray-700 transition">
-              🧠 My life: your are my role model if you have passed what i am about to pass whether you passed it sucessfully or not i don't care'
+            <li
+              class="p-4 rounded-xl bg-[var(--card)] hover:shadow-lg transition"
+            >
+              🧠 Brain Dump: My notes, knowledge, and ideas
             </li>
           </ul>
+
+          <div class="mt-6">
+            <button class="btn btn-primary">Explore More</button>
+          </div>
         </div>
       </section>
 
-      <footer class="mt-12 text-center text-pink-500 text-sm">
-        &copy; 2025 Chiboy Database. Powered by the chisom favour ✨
+      <footer class="mt-14 text-center text-[var(--muted)] text-sm">
+        &copy; 2025 Chiboy Database. Powered by the future ✨
       </footer>
     </div>
+
+    <script>
+      function toggleTheme() {
+        const html = document.documentElement;
+        const current = html.getAttribute('data-theme');
+        html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+      }
+    </script>
   </body>
 </html>
