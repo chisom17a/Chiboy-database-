@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" class="transition-colors duration-300" data-theme="dark">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chiboy Database</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      };
+    </script>
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
       rel="stylesheet"
@@ -17,157 +18,85 @@
       body {
         font-family: 'Orbitron', sans-serif;
       }
-
-      .glass {
-        backdrop-filter: blur(16px);
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-      }
-
-      html[data-theme='light'] {
-        --bg: #f3f4f6;
-        --text: #1f2937;
-        --card: #ffffff;
-        --accent: #3b82f6;
-        --muted: #6b7280;
-      }
-
-      html[data-theme='dark'] {
-        --bg: #0f172a;
-        --text: #e5e7eb;
-        --card: #1e293b;
-        --accent: #60a5fa;
-        --muted: #94a3b8;
-      }
-
-      body {
-        background-color: var(--bg);
-        color: var(--text);
-      }
-
-      .btn {
-        @apply px-4 py-2 font-semibold rounded-xl transition-colors duration-300;
-      }
-
-      .btn-primary {
-        background-color: var(--accent);
-        color: white;
-      }
-
-      .btn-primary:hover {
-        background-color: #2563eb;
-      }
-
-      .btn-toggle {
-        background: transparent;
-        border: 1px solid var(--accent);
-        color: var(--accent);
-      }
-
-      .btn-toggle:hover {
-        background-color: var(--accent);
-        color: white;
-      }
     </style>
   </head>
+  <body class="bg-gray-100 dark:bg-[#0f1a24] text-gray-800 dark:text-gray-100 transition-colors duration-500 min-h-screen px-4 flex items-center justify-center">
+    <div class="max-w-5xl w-full p-8 md:p-12 bg-white dark:bg-[#182c3d] shadow-2xl rounded-3xl backdrop-blur-lg border border-gray-300 dark:border-gray-700">
+      <!-- Header -->
+      <header class="mb-10 text-center">
+        <h1 class="text-5xl font-bold text-blue-500 dark:text-blue-300">Chiboy Database</h1>
+        <p class="text-lg text-gray-600 dark:text-gray-300 mt-2">The Futuristic Personal Repository</p>
 
-  <body class="min-h-screen flex items-center justify-center px-4">
-    <div class="absolute top-6 right-6">
-      <button
-        onclick="toggleTheme()"
-        class="btn btn-toggle text-sm px-3 py-1 rounded-lg"
-      >
-        Toggle Mode
-      </button>
-    </div>
-
-    <div class="max-w-5xl w-full p-10 rounded-3xl glass shadow-2xl">
-      <header class="mb-12 text-center">
-        <h1 class="text-5xl font-bold text-[var(--accent)]">Chiboy Database</h1>
-        <p class="text-lg text-[var(--muted)] mt-2">
-          The Futuristic Personal Repository
-        </p>
+        <!-- Dark/Light Mode Toggle -->
+        <div class="mt-4 flex justify-center">
+          <button
+            id="theme-toggle"
+            class="px-4 py-2 text-sm bg-blue-500 hover:bg-blue-600 text-white rounded-full transition"
+          >
+            Toggle Dark/Light Mode
+          </button>
+        </div>
       </header>
 
+      <!-- Main Section -->
       <section class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- About Me -->
         <div>
-          <h2 class="text-2xl font-semibold text-[var(--accent)] mb-4">
-            👨‍🚀 About Me
-          </h2>
-          <p class="text-[var(--text)]">
-            Hello, I'm <strong>Chiboy</strong> — a developer, tech enthusiast,
-            and data-driven thinker. This is my personal futuristic database
-            where I archive my knowledge, projects, and digital footprint.
+          <h2 class="text-2xl font-semibold text-blue-600 dark:text-blue-300 mb-4">👨‍🚀 About Me</h2>
+          <p class="text-gray-700 dark:text-gray-200 mb-4">
+            Hello, I'm <strong>Chiboy</strong> — a developer, tech enthusiast, and data-driven thinker.
+            This is my personal futuristic database where I archive my knowledge, projects, and digital footprint.
           </p>
 
-          <ul class="mt-6 space-y-2 text-[var(--muted)]">
-            <li>💼 Role: Full Stack Developer</li>
-            <li>
-              🌐 Website:
-              <a href="#" class="text-[var(--accent)] underline"
-                >https://chiboy.dev</a
-              >
+          <ul class="space-y-2 text-sm">
+            <li>💼 Role: a promoter, a web designer and a content creator</li>
+            <li>🌐 Website: 
+              <a href="https://chiboy-database.vercel.app/" class="text-green-600 dark:text-green-400 underline">chiboy-database.vercel.app</a>
             </li>
-            <li>
-              ✉️ Email:
-              <a
-                href="mailto:chiboy@example.com"
-                class="text-[var(--accent)] underline"
-                >chiboy@example.com</a
-              >
+            <li>✉️ Email: 
+              <a href="mailto:chiboy21a@gmail.com" class="text-red-600 dark:text-red-400 underline">chiboy21a@gmail.com</a>
             </li>
-            <li>📍 Location: Lagos, Nigeria</li>
+            <li>📍 Location: Plateau State, Nigeria</li>
           </ul>
 
           <div class="mt-6">
-            <button class="btn btn-primary">View Resume</button>
+            <button class="px-5 py-2 rounded-full bg-purple-600 text-white hover:bg-purple-700 transition">
+              Contact Me
+            </button>
           </div>
         </div>
 
+        <!-- Who I Am -->
         <div>
-          <h2 class="text-2xl font-semibold text-[var(--accent)] mb-4">
-            📁 What’s Inside
-          </h2>
+          <h2 class="text-2xl font-semibold text-yellow-600 dark:text-yellow-300 mb-4">📁 Who I Am</h2>
           <ul class="space-y-4">
-            <li
-              class="p-4 rounded-xl bg-[var(--card)] hover:shadow-lg transition"
-            >
-              🚀 Projects: Showcasing my latest apps & tech tools
+            <li class="p-4 rounded-xl bg-pink-100 dark:bg-pink-900 shadow hover:scale-[1.01] transition">
+              🚀 My job: I am a promoter, a web designer and a content creator.
             </li>
-            <li
-              class="p-4 rounded-xl bg-[var(--card)] hover:shadow-lg transition"
-            >
-              📚 Blog: Thoughts on code, life & the future
+            <li class="p-4 rounded-xl bg-yellow-100 dark:bg-yellow-900 shadow hover:scale-[1.01] transition">
+              💡 Advice: Life is a race for only those who are ready to succeed in it.
             </li>
-            <li
-              class="p-4 rounded-xl bg-[var(--card)] hover:shadow-lg transition"
-            >
-              📸 Gallery: Visuals and media library
+            <li class="p-4 rounded-xl bg-red-100 dark:bg-red-900 shadow hover:scale-[1.01] transition">
+              📸 The way: Take the advice of someone who has been there and you won't waste time being successful.
             </li>
-            <li
-              class="p-4 rounded-xl bg-[var(--card)] hover:shadow-lg transition"
-            >
-              🧠 Brain Dump: My notes, knowledge, and ideas
+            <li class="p-4 rounded-xl bg-blue-100 dark:bg-blue-900 shadow hover:scale-[1.01] transition">
+              🧠 My life: You are my role model if you've passed what I'm about to pass, whether you succeeded or not.
             </li>
           </ul>
-
-          <div class="mt-6">
-            <button class="btn btn-primary">Explore More</button>
-          </div>
         </div>
       </section>
 
-      <footer class="mt-14 text-center text-[var(--muted)] text-sm">
-        &copy; 2025 Chiboy Database. Powered by the future ✨
+      <!-- Footer -->
+      <footer class="mt-12 text-center text-sm text-gray-500 dark:text-pink-400">
+        &copy; 2025 Chiboy Database. Powered by the chisom favour ✨
       </footer>
     </div>
 
     <script>
-      function toggleTheme() {
-        const html = document.documentElement;
-        const current = html.getAttribute('data-theme');
-        html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
-      }
+      const toggle = document.getElementById('theme-toggle');
+      toggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+      });
     </script>
   </body>
 </html>
