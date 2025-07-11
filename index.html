@@ -20,22 +20,25 @@
       }
     </style>
   </head>
-  <body class="bg-gray-100 dark:bg-[#0f1a24] text-gray-800 dark:text-gray-100 transition-colors duration-500 min-h-screen px-4 flex items-center justify-center">
-    <div class="max-w-5xl w-full p-8 md:p-12 bg-white dark:bg-[#182c3d] shadow-2xl rounded-3xl backdrop-blur-lg border border-gray-300 dark:border-gray-700">
+
+  <body class="bg-gray-100 dark:bg-[#0f1a24] text-gray-800 dark:text-gray-100 transition-colors duration-500 min-h-screen">
+    <!-- Top Bar with Theme Toggle -->
+    <div class="w-full flex justify-end p-4">
+      <button
+        id="theme-toggle"
+        class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-full shadow transition"
+        title="Toggle Dark/Light Mode"
+      >
+        🌙 / ☀️
+      </button>
+    </div>
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto p-6 md:p-12 bg-white dark:bg-[#182c3d] shadow-xl rounded-3xl border border-gray-300 dark:border-gray-700">
       <!-- Header -->
-      <header class="mb-10 text-center">
+      <header class="text-center mb-10">
         <h1 class="text-5xl font-bold text-blue-500 dark:text-blue-300">Chiboy Database</h1>
         <p class="text-lg text-gray-600 dark:text-gray-300 mt-2">The Futuristic Personal Repository</p>
-
-        <!-- Dark/Light Mode Toggle -->
-        <div class="mt-4 flex justify-center">
-          <button
-            id="theme-toggle"
-            class="px-4 py-2 text-sm bg-blue-500 hover:bg-blue-600 text-white rounded-full transition"
-          >
-            Toggle Dark/Light Mode
-          </button>
-        </div>
       </header>
 
       <!-- Main Section -->
@@ -50,18 +53,18 @@
 
           <ul class="space-y-2 text-sm">
             <li>💼 Role: a promoter, a web designer and a content creator</li>
-            <li>🌐 Website: 
-              <a href="https://taplink.cc/chibotexam" class="text-green-600 dark:text-green-400 underline">chiboy-database.vercel.app</a>
+            <li>🌐 Website:
+              <a href="https://taplink.cc/chibotexam" class="text-green-600 dark:text-green-400 underline">Our Products</a>
             </li>
-            <li>✉️ Email: 
-              <a href="mailto:chiboy21a@gmail.com" class="text-red-600 dark:text-red-400 underline">chiboy21a@gmail.com</a>
+            <li>✉️ Email:
+              <a href="mailto:chiboy21a@gmail.com" class="text-red-600 dark:text-red-400 underline">send us an email</a>
             </li>
             <li>📍 Location: Plateau State, Nigeria</li>
           </ul>
 
           <div class="mt-6">
-            <button class="px-5 py-2 rounded-full bg-purple-600 text-white hover:bg-purple-700 transition">
-              Contact Me
+            <button class="px-5 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-full transition">
+              our contact details are below👇👇👇👇
             </button>
           </div>
         </div>
@@ -86,12 +89,38 @@
         </div>
       </section>
 
+      <!-- App Links Section -->
+      <div class="mt-12 flex flex-wrap justify-center gap-4">
+        <a
+          href="https://wa.me/2349162141283?text=Hello%20Chiboy%2C%20I%20will%20like%20to%20promote%20my%20channel%20on%20your%20website.%20The%20services%20I%20render%20are%3A"
+          target="_blank"
+          class="px-6 py-2 bg-green-500 hover:bg-green-600 text-white rounded-full transition shadow"
+        >
+          WhatsApp Me 📲
+        </a>
+        <a
+          href="https://t.me/updatezone1j" <!-- Replace with your actual Telegram --
+          target="_blank"
+          class="px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition shadow"
+        >
+          Message on Telegram 💬
+        </a>
+        <a
+          href="https://whatsapp.com/channel/0029Vb6bKygGE56rKLWKfv2w" <!-- Replace with your LinkedIn URL --
+          target="_blank"
+          class="px-6 py-2 bg-gray-700 hover:bg-gray-800 text-white rounded-full transition shadow"
+        >
+          Join our whatsapp channel for more updates 💼
+        </a>
+      </div>
+
       <!-- Footer -->
-      <footer class="mt-12 text-center text-sm text-gray-500 dark:text-pink-400">
+      <footer class="mt-10 text-center text-sm text-gray-500 dark:text-yellow-400">
         &copy; 2025 Chiboy Database. Powered by the chisom favour ✨
       </footer>
-    </div>
+    </main>
 
+    <!-- Dark Mode Toggle Script -->
     <script>
       const toggle = document.getElementById('theme-toggle');
       toggle.addEventListener('click', () => {
