@@ -1,131 +1,116 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chiboy Database</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-      };
-    </script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: 'Orbitron', sans-serif;
-      }
-    </style>
-  </head>
-
-  <body class="bg-gray-100 dark:bg-[#0f1a24] text-gray-800 dark:text-gray-100 transition-colors duration-500 min-h-screen">
-    <!-- Top Bar with Theme Toggle -->
-    <div class="w-full flex justify-end p-4">
-      <button
-        id="theme-toggle"
-        class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-full shadow transition"
-        title="Toggle Dark/Light Mode"
-      >
-        🌙 / ☀️
-      </button>
-    </div>
-
-    <!-- Main Container -->
-    <main class="max-w-5xl mx-auto p-6 md:p-12 bg-white dark:bg-[#182c3d] shadow-xl rounded-3xl border border-gray-300 dark:border-gray-700">
-      <!-- Header -->
-      <header class="text-center mb-10">
-        <h1 class="text-5xl font-bold text-blue-500 dark:text-blue-300">Chiboy Database</h1>
-        <p class="text-lg text-gray-600 dark:text-gray-300 mt-2">The Futuristic Personal Repository</p>
-      </header>
-
-      <!-- Main Section -->
-      <section class="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <!-- About Me -->
-        <div>
-          <h2 class="text-2xl font-semibold text-blue-600 dark:text-blue-300 mb-4">👨‍🚀 About Me</h2>
-          <p class="text-gray-700 dark:text-gray-200 mb-4">
-            Hello, I'm <strong>Chiboy</strong> — a developer, tech enthusiast, and data-driven thinker.
-            This is my personal futuristic database where I archive my knowledge, projects, and digital footprint.
-          </p>
-
-          <ul class="space-y-2 text-sm">
-            <li>💼 Role: a promoter, a web designer and a content creator</li>
-            <li>🌐 Website:
-              <a href="https://taplink.cc/chibotexam" class="text-green-600 dark:text-green-400 underline">Our Products</a>
-            </li>
-            <li>✉️ Email:
-              <a href="mailto:chiboy21a@gmail.com" class="text-red-600 dark:text-red-400 underline">send us an email</a>
-            </li>
-            <li>📍 Location: Plateau State, Nigeria</li>
-          </ul>
-
-          <div class="mt-6">
-            <button class="px-5 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-full transition">
-              our contact details are below👇👇👇👇
-            </button>
-          </div>
-        </div>
-
-        <!-- Who I Am -->
-        <div>
-          <h2 class="text-2xl font-semibold text-yellow-600 dark:text-yellow-300 mb-4">📁 Who I Am</h2>
-          <ul class="space-y-4">
-            <li class="p-4 rounded-xl bg-pink-100 dark:bg-pink-900 shadow hover:scale-[1.01] transition">
-              🚀 My job: I am a promoter, a web designer and a content creator.
-            </li>
-            <li class="p-4 rounded-xl bg-yellow-100 dark:bg-yellow-900 shadow hover:scale-[1.01] transition">
-              💡 Advice: Life is a race for only those who are ready to succeed in it.
-            </li>
-            <li class="p-4 rounded-xl bg-red-100 dark:bg-red-900 shadow hover:scale-[1.01] transition">
-              📸 The way: Take the advice of someone who has been there and you won't waste time being successful.
-            </li>
-            <li class="p-4 rounded-xl bg-blue-100 dark:bg-blue-900 shadow hover:scale-[1.01] transition">
-              🧠 My life: You are my role model if you've passed what I'm about to pass, whether you succeeded or not.
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- App Links Section -->
-      <div class="mt-12 flex flex-wrap justify-center gap-4">
-        <a
-          href="https://wa.me/2349162141283?text=Hello%20Chiboy%2C%20I%20will%20like%20to%20promote%20my%20channel%20on%20your%20website.%20The%20services%20I%20render%20are%3A"
-          target="_blank"
-          class="px-6 py-2 bg-green-500 hover:bg-green-600 text-white rounded-full transition shadow"
-        >
-          WhatsApp Me 📲
-        </a>
-        <a
-          href="https://t.me/updatezone1j" <!-- Replace with your actual Telegram --
-          target="_blank"
-          class="px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition shadow"
-        >
-          Message on Telegram 💬
-        </a>
-        <a
-          href="https://whatsapp.com/channel/0029Vb6bKygGE56rKLWKfv2w" <!-- Replace with your LinkedIn URL --
-          target="_blank"
-          class="px-6 py-2 bg-gray-700 hover:bg-gray-800 text-white rounded-full transition shadow"
-        >
-          Join our whatsapp channel for more updates 💼
-        </a>
-      </div>
-
-      <!-- Footer -->
-      <footer class="mt-10 text-center text-sm text-gray-500 dark:text-yellow-400">
-        &copy; 2025 Chiboy Database. Powered by the chisom favour ✨
-      </footer>
-    </main>
-
-    <!-- Dark Mode Toggle Script -->
-    <script>
-      const toggle = document.getElementById('theme-toggle');
-      toggle.addEventListener('click', () => {
-        document.documentElement.classList.toggle('dark');
-      });
-    </script>
-  </body>
+<!DOCTYPE html>  
+<html lang="en" class="scroll-smooth dark"> 
+  <head>  
+    <meta charset="UTF-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <title>Chiboy Database</title>  
+    <script src="https://cdn.tailwindcss.com"></script>  
+    <script>  
+      tailwind.config = {  
+        darkMode: 'class',  
+      };  
+    </script>  
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />  
+    <style>  
+      body {  
+        font-family: 'Orbitron', sans-serif;  
+      }  
+    </style>  
+  </head>  
+  
+  <body class="bg-gradient-to-br from-gray-100 to-white dark:from-gray-900 dark:to-black text-gray-800 dark:text-gray-100 transition-colors duration-500 min-h-screen">  
+    <!-- Navigation Bar -->  
+    <header class="flex justify-between items-center px-6 md:px-16 py-4 bg-white dark:bg-[#121a26] shadow-md sticky top-0 z-50">  
+      <div class="flex items-center space-x-3">  
+        <img src="https://invdsds.com/ui4/logo1.png" alt="Chiboy Logo" class="w-12 h-12 rounded-full shadow-lg" />  
+        <span class="text-2xl font-bold text-blue-600 dark:text-blue-300">Chiboy Database</span>  
+      </div>  
+      <button id="theme-toggle" class="text-xl px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition">🌙 / ☀️</button>  
+    </header>  
+  
+    <!-- Main Content -->  
+    <main class="max-w-6xl mx-auto p-6 md:p-12 bg-white dark:bg-[#182c3d] shadow-2xl rounded-3xl mt-10">  
+      <!-- Welcome Section -->  
+      <section class="text-center mb-16">  
+        <h1 class="text-4xl md:text-5xl font-extrabold text-yellow-500 dark:text-green-300 leading-bold">  
+          Chiboy Database  
+        </h1>  
+        <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mt-4">  
+          The Futuristic Personal Repository  
+        </p>  
+      </section>  
+  
+      <!-- About Me and Who I Am -->  
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-12">  
+        <!-- About Me -->  
+        <div>  
+          <h2 class="text-2xl font-semibold text-blue-600 dark:text-blue-300 mb-4">👨‍🚀 About Me</h2>  
+          <p class="text-base text-gray-700 dark:text-gray-200 mb-4">  
+            Hello, I'm <strong>Chiboy database</strong> — a developer, tech enthusiast, and data-driven thinker. This is my personal futuristic database where I archive my knowledge, projects, and digital footprint.  
+          </p>  
+          <ul class="space-y-3 text-sm text-gray-800 dark:text-gray-200">  
+            <li>💼 Role: a promoter, a web designer and a content creator</li>  
+            <li>🌐 Website: <a href="https://taplink.cc/chibotexam" class="text-green-600 dark:text-green-400 underline">Our Products</a></li>  
+            <li>✉️ Email: <a href="mailto:chiboy21a@gmail.com" class="text-red-600 dark:text-red-400 underline">send us an email</a></li>  
+            <li>📍 Location: Plateau State, Nigeria</li>  
+          </ul>  
+          <div class="mt-6">  
+            <button class="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow transition">  
+              Our contact details are below 👇👇👇👇  
+            </button>  
+          </div>  
+        </div>  
+  
+        <!-- Who I Am -->  
+        <div>  
+          <h2 class="text-2xl font-semibold text-yellow-600 dark:text-yellow-300 mb-4">📁 Who I Am</h2>  
+          <ul class="space-y-4">  
+            <li class="p-4 rounded-xl bg-pink-100 dark:bg-pink-900 shadow hover:scale-[1.02] transition">  
+              🚀 My job: I am a promoter, a web designer and a content creator.  
+            </li>  
+            <li class="p-4 rounded-xl bg-yellow-100 dark:bg-yellow-900 shadow hover:scale-[1.02] transition">  
+              💡 Advice: Life is a race for only those who are ready to succeed in it.  
+            </li>  
+            <li class="p-4 rounded-xl bg-red-100 dark:bg-red-900 shadow hover:scale-[1.02] transition">  
+              📸 The way: Take the advice of someone who has been there and you won't waste time being successful.  
+            </li>  
+            <li class="p-4 rounded-xl bg-blue-100 dark:bg-blue-900 shadow hover:scale-[1.02] transition">  
+              🧠 My life: You are my role model if you've passed what I'm about to pass, whether you succeeded or not.  
+            </li>  
+          </ul>  
+        </div>  
+      </section>  
+  
+      <!-- Contact Buttons -->  
+      <section class="mt-16 flex flex-wrap justify-center gap-6">  
+        <a href="https://wa.me/2349162141283?text=Hello%20Chiboy%2C%20I%20will%20like%20to%20promote%20my%20channel%20on%20your%20website.%20The%20services%20I%20render%20are%3A"  
+           target="_blank"  
+           class="px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition">  
+          WhatsApp Me 📲  
+        </a>  
+        <a href="https://t.me/updatezone1j"  
+           target="_blank"  
+           class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-lg transition">  
+          Message on Telegram 💬  
+        </a>  
+        <a href="https://whatsapp.com/channel/0029Vb6bKygGE56rKLWKfv2w"  
+           target="_blank"  
+           class="px-6 py-3 bg-indigo-800 hover:bg-blue-900 text-white rounded-full shadow-lg transition">  
+          Join our WhatsApp Channel 💼  
+        </a>  
+      </section>  
+  
+      <!-- Footer -->  
+      <footer class="mt-20 text-center text-sm text-gray-500 dark:text-yellow-400">  
+        &copy; 2025 Chiboy Database. Powered by the chisom favour ✨  
+      </footer>  
+    </main>  
+  
+    <!-- Dark Mode Script -->  
+    <script>  
+      document.getElementById('theme-toggle').addEventListener('click', () => {  
+        document.documentElement.classList.toggle('dark');  
+      });  
+    </script>  
+  </body>  
 </html>
